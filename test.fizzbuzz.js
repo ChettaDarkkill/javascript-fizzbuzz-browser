@@ -1,4 +1,7 @@
 function fizzbuzz(num) {
+  if(num % 15 == 0) {
+    return "FizzBuzz"
+  }
   if(num % 3 == 0) {
     return "Fizz"
   }
@@ -50,6 +53,9 @@ describe('Fizzbuzz', function() {
   })
   it('should return 14 when the value is 14', () => {
     chai.assert.equal(14, fizzbuzz(14))
+  })
+  it('should return FizzBuzz when value is 15', () => {
+    chai.assert.equal("FizzBuzz", fizzbuzz(15))
   })
 
 })

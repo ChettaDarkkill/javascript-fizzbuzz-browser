@@ -90,4 +90,7 @@ describe('Fizzbuzz', function() {
   it('should return 26 when value is 26', () => {
     chai.assert.equal(26, fizzbuzz(26))
   })
+  it('should return Fizz when value is 27', () => {
+    chai.assert.equal("Fizz", fizzbuzz(27))
+  })
 })

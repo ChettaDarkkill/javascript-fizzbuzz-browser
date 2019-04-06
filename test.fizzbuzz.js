@@ -2,7 +2,7 @@ function fizzbuzz(num) {
   if(num % 3 == 0) {
     return "Fizz"
   }
-  if(num == 5) {
+  if(num % 5 == 0) {
     return "Buzz"
   }
   return num
@@ -29,5 +29,14 @@ describe('Fizzbuzz', function() {
   })
   it('should return 7 when the value is 7', () => {
     chai.assert.equal(7, fizzbuzz(7))
+  })
+  it('should return 8 when the value is 8', () => {
+    chai.assert.equal(8, fizzbuzz(8))
+  })
+  it('should return Fizz when the value is 9', () => {
+    chai.assert.equal("Fizz", fizzbuzz(9))
+  })
+  it('should return Buzz when the value is 10', () => {
+    chai.assert.equal("Buzz", fizzbuzz(10))
   })
 })
